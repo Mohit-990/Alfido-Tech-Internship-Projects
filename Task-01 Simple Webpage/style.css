@@ -1,0 +1,121 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #6e87f8 0%, #754e9b 100%);
+    min-height: 100vh;
+}
+header {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 32px 0;
+    text-align: center;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 50px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+section {
+    background: white;
+    margin: 32px 0;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: #667eea;
+    margin-bottom: 24px;
+    font-size: 29px;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 8px;
+}
+
+.image-section {
+    text-align: center;
+}
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #667eea;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+}
+.profile-image:hover {
+    transform: scale(1.05);
+}
+.image-caption {
+    font-style: italic;
+    color: #222;
+    font-size: 16px;
+}
+
+.bio-section p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #000;
+    text-align: justify;
+}
+.bio-section span{
+    color: #667eea;
+    font-size: 20px;
+}
+footer {
+    text-align: center;
+    padding: 32px;
+    color: white;
+    margin-top: 48px;
+}
+@media (max-width: 600px) {
+    h1 {
+        font-size: 32px;
+    }
+    
+    main {
+        padding: 0 16px;
+    }
+    
+    section {
+        padding: 24px;
+        margin: 16px 0;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+}
+section:first-child {
+    margin-top: 0;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
