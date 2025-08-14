@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#taskInput:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+#addButton {
+    padding: 12px 24px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#addButton:hover {
+    background: #5a6fd8;
+}
+
+#addButton:active {
+    transform: scale(0.98);
+}
+
+.task-list {
+    margin-bottom: 20px;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.task-item:hover {
+    background: #e9ecef;
+}
+
+.task-item.completed {
+    background: #d4edda;
+}
+
+.task-text {
+    flex: 1;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #666;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+.stats {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    padding: 40px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .input-section {
+        flex-direction: column;
+    }
+    
+    #addButton {
+        width: 100%;
+    }
+}
